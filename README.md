@@ -1,4 +1,4 @@
-# Odoo-Open-Academy-Module
+# Odoo - Open Academy Module
 -----
 ## UNAH - IS-902
 
