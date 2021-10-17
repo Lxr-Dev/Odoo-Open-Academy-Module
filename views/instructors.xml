@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+
+  <!-- open_academy.instructor tree view -->
+  <record id="Instructor_view_tree" model="ir.ui.view">
+      <field name="name">open_academy.instructor.view.tree</field>
+      <field name="model">open_academy.instructor</field>
+      <field name="arch" type="xml">
+          <tree>
+              <!-- Add your fields here -->
+              <field name="name"/>
+              <field name="identity"/>
+          </tree>
+      </field>
+  </record>
+
+  <!-- open_academy.instructor form view -->
+  <record id="Instructor_view_form" model="ir.ui.view">
+      <field name="name">open_academy.instructor.view.form</field>
+      <field name="model">open_academy.instructor</field>
+      <field name="arch" type="xml">
+          <form string="Instructores">
+              <sheet>
+                  <group>
+                      <!-- Add your fields here -->
+                      <field name="name"/>
+                      <field name="identity"/>
+                  </group>
+              </sheet>
+          </form>
+      </field>
+  </record>
+
+
+  <!-- open_academy.instructor action window -->
+  <record id="Instructor_action" model="ir.actions.act_window">
+      <field name="name">open_academy.instructor.action</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">open_academy.instructor</field>
+      <field name="view_mode">tree,form</field>
+      <!-- <field name="view_type">form</field> -->
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              <!-- Add Text Here -->
+              
+          </p><p>
+              <!-- More details about what a user can do with this object will be OK --> 
+          </p>
+      </field>
+  </record>
+
+
+  <!-- This Menu Item Must have a parent -->
+  <menuitem id="instructors_menu" name="Instructores" parent="open_academy_menu_root" sequence="8"/>  
+
+  <!-- This Menu Item must have a parent and an action -->
+  <menuitem id="instructors_menu_act" name="Instructores" parent="instructors_menu" action="Instructor_action" sequence="8"/>
+
+  </data>
+</odoo>

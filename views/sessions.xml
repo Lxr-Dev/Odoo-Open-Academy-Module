@@ -1,0 +1,101 @@
+<odoo>
+  <data>
+
+  <!-- open_academy.session tree view -->
+  <record id="Session_view_tree" model="ir.ui.view">
+      <field name="name">open_academy.session.view.tree</field>
+      <field name="model">open_academy.session</field>
+      <field name="arch" type="xml">
+          <tree>
+              <!-- Add your fields here -->
+              <field name="name"/>
+              <field name="course"/>
+              <field name="startDate"/>
+              <field name="duration"/>
+              <field name="numberOfSeats"/>
+              <field name="seatsAvailable" widget="progressbar"/>
+          </tree>
+      </field>
+  </record>
+
+  <!-- open_academy.session form view -->
+  <record id="Session_view_form" model="ir.ui.view">
+      <field name="name">open_academy.session.view.form</field>
+      <field name="model">open_academy.session</field>
+      <field name="arch" type="xml">
+          <form string="Sesiones">
+              <sheet>
+                  <group>
+                      <!-- Add your fields here -->
+                      <field name="name"/>
+                      <field name="course"/>
+                      <field name="startDate"/>
+                      <field name="duration"/>
+                      <field name="numberOfSeats"/>
+                      <field name="seatsAvailable" widget="progressbar"/>
+                  </group>
+              </sheet>
+          </form>
+      </field>
+  </record>
+
+
+  <!-- open_academy.session action window -->
+  <record id="Session_action" model="ir.actions.act_window">
+      <field name="name">open_academy.session.action</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">open_academy.session</field>
+      <field name="view_mode">tree,form,graph</field>
+      <!-- <field name="view_type">form</field> -->
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              <!-- Add Text Here -->
+              
+          </p><p>
+              <!-- More details about what a user can do with this object will be OK --> 
+          </p>
+      </field>
+  </record>
+
+  <!-- open_academy.session action window -->
+  <record id="Session_action_graph" model="ir.actions.act_window">
+      <field name="name">open_academy.session.action</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">open_academy.session</field>
+      <field name="view_mode">graph</field>
+      <!-- <field name="view_type">form</field> -->
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              <!-- Add Text Here -->
+              
+          </p><p>
+              <!-- More details about what a user can do with this object will be OK --> 
+          </p>
+      </field>
+  </record>
+
+  <!-- open_academy.session graph view -->
+  <record id="Session_view_graph" model="ir.ui.view">
+      <field name="name">open_academy.session.view.graph</field>
+      <field name="model">open_academy.session</field>
+      <field name="arch" type="xml">
+          <graph string="Inscripciones por Curso">
+              <!-- Add your fields here -->
+              <field name="course"/>
+              <field name="attendees" type="measure" />
+          </graph>
+      </field>
+  </record>
+
+
+  <!-- This Menu Item Must have a parent -->
+  <menuitem id="sessions_menu" name="Sesiones" parent="open_academy_menu_root" sequence="12"/>  
+
+  <!-- This Menu Item must have a parent and an action -->
+  <menuitem id="sessions_menu_act" name="Sesiones" parent="sessions_menu" action="Session_action" sequence="12"/>
+
+  <!-- This Menu Item must have a parent and an action -->
+  <menuitem id="sessions_menu_graph" name="Estadísticas" parent="sessions_menu" action="Session_action_graph" sequence="12"/>
+
+  </data>
+</odoo>

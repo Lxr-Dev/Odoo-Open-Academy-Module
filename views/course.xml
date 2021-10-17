@@ -1,0 +1,77 @@
+<odoo>
+  <data>
+
+  <!-- open_academy.course tree view -->
+  <record id="Course_view_tree" model="ir.ui.view">
+      <field name="name">open_academy.course.view.tree</field>
+      <field name="model">open_academy.course</field>
+      <field name="arch" type="xml">
+          <tree>
+              <!-- Add your fields here -->
+              <field name="name"/>
+              <field name="description"/>
+          </tree>
+      </field>
+  </record>
+
+  <!-- open_academy.course form view -->
+  <record id="Course_view_form" model="ir.ui.view">
+      <field name="name">open_academy.course.view.form</field>
+      <field name="model">open_academy.course</field>
+      <field name="arch" type="xml">
+          <form string="Cursos">
+              <sheet>
+                  <group>
+                      <!-- Add your fields here -->
+                      <field name="name"/>
+                      <field name="description"/>
+                  </group>
+              </sheet>
+          </form>
+      </field>
+  </record>
+
+  <!-- open_academy.course search view -->
+  <record id="model_name_view_search" model="ir.ui.view">
+      <field name="name">open_academy.course.view.search</field>
+      <field name="model">open_academy.course</field>
+      <field name="arch" type="xml">
+          <search string="Search Description">
+              <!-- Add your fields here -->
+              <field name="name"/>
+              <field name="description"/>
+          </search>
+      </field>
+  </record>
+  
+
+  <!-- open_academy.course action window -->
+  <record id="Course_action" model="ir.actions.act_window">
+      <field name="name">open_academy.course.action</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">open_academy.course</field>
+      <field name="view_mode">tree,form</field>
+      <!-- <field name="view_type">form</field> -->
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              <!-- Add Text Here -->
+              
+          </p> <p>
+              <!-- More details about what a user can do with this object will be OK --> 
+          </p>
+      </field>
+  </record>
+
+
+  <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+  <menuitem id="open_academy_menu_root" name="Open Academy" sequence="10"/>
+    <!-- explicit list view definition -->
+
+  <!-- This Menu Item Must have a parent -->
+  <menuitem id="category_menu_categ" name="Cursos" parent="open_academy_menu_root" sequence="10"/>  
+
+  <!-- This Menu Item must have a parent and an action -->
+  <menuitem id="course_menu_act" name="Cursos" parent="category_menu_categ" action="Course_action" sequence="10"/>
+
+  </data>
+</odoo>

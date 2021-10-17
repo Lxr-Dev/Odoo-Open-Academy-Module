@@ -1,0 +1,62 @@
+<odoo>
+  <data>
+
+  <!-- open_academy.inscription tree view -->
+  <record id="Inscription_view_tree" model="ir.ui.view">
+      <field name="name">open_academy.inscription.view.tree</field>
+      <field name="model">open_academy.inscription</field>
+      <field name="arch" type="xml">
+          <tree>
+              <!-- Add your fields here -->
+              <field name="name"/>
+              <field name="course"/>
+              <field name="session"/>
+          </tree>
+      </field>
+  </record>
+
+  <!-- open_academy.inscription form view -->
+  <record id="Inscription_view_form" model="ir.ui.view">
+      <field name="name">open_academy.inscription.view.form</field>
+      <field name="model">open_academy.inscription</field>
+      <field name="arch" type="xml">
+          <form string="Inscripciones">
+              <sheet>
+                  <group>
+                      <!-- Add your fields here -->
+                      <field name="name"/>
+                      <field name="course"/>
+                      <field name="session"/>
+                  </group>
+              </sheet>
+          </form>
+      </field>
+  </record>
+
+
+  <!-- open_academy.inscription action window -->
+  <record id="Inscription_action" model="ir.actions.act_window">
+      <field name="name">open_academy.inscription.action</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">open_academy.inscription</field>
+      <field name="view_mode">tree,form</field>
+      <!-- <field name="view_type">form</field> -->
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              <!-- Add Text Here -->
+              
+          </p><p>
+              <!-- More details about what a user can do with this object will be OK --> 
+          </p>
+      </field>
+  </record>
+
+
+  <!-- This Menu Item Must have a parent -->
+  <menuitem id="inscriptions_menu" name="Inscripciones" parent="open_academy_menu_root" sequence="14"/>  
+
+  <!-- This Menu Item must have a parent and an action -->
+  <menuitem id="inscriptions_menu_act" name="Inscripciones" parent="inscriptions_menu" action="Inscription_action" sequence="14"/>
+
+  </data>
+</odoo>

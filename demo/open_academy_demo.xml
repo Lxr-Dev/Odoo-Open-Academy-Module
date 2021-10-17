@@ -1,0 +1,108 @@
+<odoo>
+    <data>
+
+      <!-- Courses -->
+
+        <record id="demo_course1" model="open_academy.course">
+            <field name="name">IS-711</field>
+            <field name="description">Diseño Digital</field>
+        </record> 
+
+        <record id="demo_course2" model="open_academy.course">
+            <field name="name">IS-905</field>
+            <field name="description">Economía Digital</field>
+        </record> 
+
+        <record id="demo_course3" model="open_academy.course">
+            <field name="name">IS-811</field>
+            <field name="description">Seguridad Informatica</field>
+        </record> 
+
+        <record id="demo_course4" model="open_academy.course">
+            <field name="name">DQ-101</field>
+            <field name="description">Dibujo I</field>
+        </record> 
+
+      <!-- Instructors -->
+
+      <record id="demo_instructor1" model="open_academy.instructor">
+            <field name="name">Ella Akilina</field>
+            <field name="identity">0000-0000-00000</field>
+      </record> 
+
+      <record id="demo_instructor2" model="open_academy.instructor">
+            <field name="name">Halli Amaya</field>
+            <field name="identity">1111-1111-11111</field>
+      </record> 
+
+      <record id="demo_instructor3" model="open_academy.instructor">
+            <field name="name">Kevin Othman</field>
+            <field name="identity">2222-2222-22222</field>
+      </record> 
+
+      <record id="demo_instructor4" model="open_academy.instructor">
+            <field name="name">Fredo Madhu</field>
+            <field name="identity">3333-3333-33333</field>
+      </record> 
+
+      <!-- Sessions -->
+
+      <record id="demo_session1" model="open_academy.session">
+            <field name="name">3</field>
+            <field name="course">3</field>
+            <field name="startDate">2021-10-16</field>
+            <field name="duration">1</field>
+            <field name="numberOfSeats">15</field>
+      </record> 
+
+      <record id="demo_session2" model="open_academy.session">
+            <field name="name">1</field>
+            <field name="course">1</field>
+            <field name="startDate">2021-10-16</field>
+            <field name="duration">2</field>
+            <field name="numberOfSeats">20</field>
+      </record> 
+
+      <record id="demo_session3" model="open_academy.session">
+            <field name="name">2</field>
+            <field name="course">4</field>
+            <field name="startDate">2021-10-16</field>
+            <field name="duration">4</field>
+            <field name="numberOfSeats">10</field>
+      </record> 
+
+      <!-- Inscriptions -->
+      
+      <record id="demo_inscription1" model="open_academy.inscription">
+            <field name="name">Denys</field>
+            <field name="course">4</field>
+            <field name="session">3</field>
+      </record> 
+
+      <record id="demo_inscription2" model="open_academy.inscription">
+            <field name="name">Hyun</field>
+            <field name="course">4</field>
+            <field name="session">3</field>
+      </record>
+
+      <record id="demo_inscription3" model="open_academy.inscription">
+            <field name="name">Adam</field>
+            <field name="course">4</field>
+            <field name="session">3</field>
+      </record>
+
+      <record id="demo_inscription4" model="open_academy.inscription">
+            <field name="name">Miguel</field>
+            <field name="course">1</field>
+            <field name="session">2</field>
+      </record>
+
+      <record id="demo_inscription5" model="open_academy.inscription">
+            <field name="name">Freddy</field>
+            <field name="course">1</field>
+            <field name="session">2</field>
+      </record> 
+
+
+    </data>
+</odoo>

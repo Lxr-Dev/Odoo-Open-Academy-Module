@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+open_academy_course_full_access,open_academy_course_full_access,model_open_academy_course,,1,1,1,1
+open_academy_session_full_access,open_academy_session_full_access,model_open_academy_session,,1,1,1,1
+open_academy_instructor_full_access,open_academy_instructor_full_access,model_open_academy_instructor,,1,1,1,1
+open_academy_inscription_full_access,open_academy_inscription_full_access,model_open_academy_inscription,,1,1,1,1
